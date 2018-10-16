@@ -1,0 +1,16 @@
+{
+  "name": "kit-nodejs-restapi",
+  "version": "1.0.0",
+  "description": "Kit nodejs, User rest api example code.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "vladimir.fajardo@sngular.team",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "joi": "^14.0.0"
+  }
+}
