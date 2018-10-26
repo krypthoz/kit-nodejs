@@ -1,4 +1,4 @@
-const sayHello = ( )   => { return "Hello S|ngular"; };
+const sayHello = ( name )   => { return "Hello " + name; };
 const sayCurrentDate = ( )  => { return "Todas is " + new Date( ); };
 const sayGoodbay    = ( )   => { return "Goog bye!"; };
 

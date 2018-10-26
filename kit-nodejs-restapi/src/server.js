@@ -2,16 +2,19 @@ const service = require('./service');
 const joi  = require('joi');
 const express = require( 'express' );
 const app = express( );
+const pid = process.pid;
 
 app.use(express.json());
 
 app.get('/',( req, res ) => {
+ 
     res.send('Welcome to rest user CRUD api');
 });
 
 //READ all users
-app.get('/api/users', ( req, res ) => {
-    res.send( service.readAll( ) ); 
+app.get('/api/users', function( req, res ) {
+    res.send( service.readAll() );
+      
 });
 
 //READ a user by id
@@ -33,7 +36,7 @@ app.post( '/api/users', ( req,res ) => {
 });
 
 //UPDATE a user by id
-app.put('/api/users/:id', ( req, res ) => {
+app.put( '/api/users/:id', ( req, res ) => {
     const user = service.read( parseInt( req.params.id ) );
     if( !user ) { 
         res.status( 404 ).send( `User with id ${req.params.id} was not found`  );
@@ -52,9 +55,8 @@ app.delete( '/api/users/:id', ( req, res ) => {
     if( !user ) { 
         res.status( 404 ).send( `User with id ${req.params.id} was not found`  );
     }
-
     res.send( service.remove( parseInt( req.params.id ) ) );
 });
 
 const port = process.env.PORT || 8000
-app.listen(port, () => {console.log(`listen on port ${port}`)});
+app.listen( port, ( ) => { console.log( `Started process ${pid}` ); } ); 
