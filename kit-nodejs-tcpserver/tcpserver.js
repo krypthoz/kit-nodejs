@@ -1,7 +1,8 @@
 const net = require( 'net' );
 
 const tcpserver = net.createServer( (socket) => {
-        socket.write('Hello\n');
+        
+        socket.write('Socket Hello\n');
         socket.end('World\n');
 });
 

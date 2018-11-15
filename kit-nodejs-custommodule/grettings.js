@@ -1,6 +1,6 @@
-const sayHello = ( name )   => { return "Hello " + name; };
-const sayCurrentDate = ( )  => { return "Todas is " + new Date( ); };
-const sayGoodbay    = ( )   => { return "Goog bye!"; };
+const sayHello = ( name )   => { console.log(  "Hello " + name ); };
+const sayCurrentDate = ( )  => { console.log( "Todas is " + new Date( ) ) };
+const sayGoodbay    = ( )   => { console.log(  "Goog bye!" ) };
 
 exports.sayHello    = sayHello;
 exports.sayGoodbay  = sayGoodbay;

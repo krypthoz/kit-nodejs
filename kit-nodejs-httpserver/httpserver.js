@@ -4,7 +4,7 @@ http.createServer( ( req, res ) => {
     res.write('Hello\n' );
     setTimeout( ( ) => {
         res.end( 'World\n');
-    }, 10000 );
+    }, 5000 );
     res.write('goodbye\n');
 }).listen( 8000, ( ) => { 
     console.log( 'HTTP Server started' ) 
